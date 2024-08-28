@@ -1,10 +1,11 @@
 <script>
 import SectionPortada from '@/components/SectionPortada.vue';
-
+import Cuadrante from '@/components/timer/Cuadrante.vue';
 export default{
     name:'Invitation',
     components:{
-        SectionPortada
+        SectionPortada,
+        Cuadrante
     },
     data(){
         return{
@@ -18,15 +19,20 @@ export default{
 <template>
     <div class="container__invitacion container">
         <div class="content_invitacion">
-            <SectionPortada/>
+            <div class="box1">
+                <SectionPortada/>
+            </div>
+            <div class="box2">
+                <Cuadrante/> 
+            </div>
+            
+            
         </div>
-        
-        
+         
     </div>
 </template>
 <style>
-.container__invitacion{
-    border:1px solid rebeccapurple;
+.container__invitacion{    
     min-width:100%;
     min-height:100vh;
     display: flex;
@@ -36,10 +42,17 @@ export default{
 }
 .content_invitacion{
    width: 100%;
+   height:100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     position:relative;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+   
+}
+@media (min-width: 1025px) {
 }
 
 </style>
