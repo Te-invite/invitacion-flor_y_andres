@@ -11,7 +11,6 @@ export default {
 <template>
     <div class="home_container container">
         <PortadaVue />
-
     </div>
 </template>
 <style>

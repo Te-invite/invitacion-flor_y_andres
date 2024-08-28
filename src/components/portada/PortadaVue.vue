@@ -10,7 +10,15 @@ export default {
     data() {
         return {
             corazon,
-            title: 'Florencia & Andrés'
+            title: 'Florencia & Andrés',
+            
+        }
+    },
+    methods:{
+        enterInvitation(){
+                this.$router.push({
+                    name: 'Invitation'
+                });
         }
     }
 }
@@ -26,7 +34,7 @@ export default {
             </span>
         </div>
         <div class="portada_content_buttom">
-            <Boton label="INGRESAR" customClass="btn-mayor" />
+            <Boton label="INGRESAR" customClass="btn-mayor" @click="enterInvitation"/>
 
         </div>
         
