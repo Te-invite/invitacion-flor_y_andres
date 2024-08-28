@@ -2,12 +2,14 @@
 import SectionPortada from '@/components/SectionPortada.vue';
 import Cuadrante from '@/components/timer/Cuadrante.vue';
 import CurvaRight from '@/components/icon/CurvaRight.vue';
+import SectionMensaje from '@/components/SectionMensaje.vue';
 export default{
     name:'Invitation',
     components:{
         SectionPortada,
         Cuadrante,
-        CurvaRight
+        CurvaRight,
+        SectionMensaje
     },
     data(){
         return{
@@ -29,9 +31,11 @@ export default{
             <div class="box2">
                 <Cuadrante/> 
             </div>
-            
-            
         </div>
+        <div class="box3">
+            <SectionMensaje/>
+        </div>
+        
          
     </div>
 </template>
@@ -46,18 +50,21 @@ export default{
 }
 .content_invitacion{
    width: 100%;
-   height:100%;
+   height:auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .box1,
-.box2{
+.box2, .box3{
     width: 100%;
     display: flex;
     justify-content: center;
 
+}
+.box3{
+    margin-top:2rem
 }
 .box1{
     position: relative;
@@ -86,7 +93,6 @@ export default{
 @media (min-width: 1025px) {
     .content_invitacion{
     width:100vw;
-    border:1px solid red;
   }
   .curv_right{
     right: 0;

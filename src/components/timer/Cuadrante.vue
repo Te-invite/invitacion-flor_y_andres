@@ -25,10 +25,12 @@ export default{
     background-repeat: no-repeat;
     background-size: cover;
     width:300px;
-    height: 300px;
+    height: 301px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: .5rem;
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .container__cuadrante{
@@ -40,7 +42,7 @@ export default{
 @media (min-width: 1025px) {
     .container__cuadrante{
         width:520px;
-        height:520px;
+        height:524px;
     }
 }
 </style>
