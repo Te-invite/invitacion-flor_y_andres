@@ -12,9 +12,9 @@ export default {
             loaded: false,
             expired: false,
             d:"Días",
-            h:"Horas",
-            m:"Minutos",
-            s:"Segundos",
+            h:"Hs.",
+            m:"Min.",
+            s:"Seg.",
             title:"Faltan:",
             title1:"Llegó el Día"
         };
@@ -122,7 +122,7 @@ export default {
     margin-bottom: 1.2rem;
 }
 .counter__txt{
-    font-size: 1rem;
+    font-size: var(--font-size-16);
     color: var( --color__font_primary);
     font-family: var(--family__font_primary);
     font-weight: 800;
@@ -166,6 +166,10 @@ export default {
     text-align: center;
 }
 @media (min-width: 768px) and (max-width: 991px){
+    .container{
+        width:75%;
+        height: 100%;
+    }
     .title__counter{
         height: 16px;
         margin-top:-10%;
@@ -191,23 +195,22 @@ export default {
 }
 @media (min-width: 1025px) {
     .container{
-        width:100;
+        width:75%;
         height: 100%;
-        margin-top:-4rem;
 }
     .title__counter{
-        height: 18px;
+        height: 100%;
+        margin-bottom: 3rem;
     }
     .counter__content {
     width: 100px;
     height:60px;
     }
     .counter__container{
-        font-size: 56px;
-        margin: 2rem 0 ;
+        font-size: var(--font-size-42)
     }
     .counter__txt{
-        font-size: 24px;
+        font-size: var(--font-size-36);
     }
     .counter__label {
         font-size: 24px;

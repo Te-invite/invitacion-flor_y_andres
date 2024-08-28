@@ -37,4 +37,17 @@ export default {
     width:430px;
     height:71px;
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #curvaR{
+        width:100vw;
+        height: auto;
+    }
+}
+@media (min-width: 1025px) {
+    #curvaR{
+        min-width:100vw;
+        height: 100%;
+    }
+}
 </style>

@@ -1,12 +1,12 @@
 <script>
 import foto1 from '@/assets/img/foto01.png';
 import Guirnalda from './icon/Guirnalda.vue';
-import CurvaRight from './icon/CurvaRight.vue';
+
 export default {
     name: 'SectionPortada',
     components: {
         Guirnalda,
-        CurvaRight
+        
     },
     data() {
         return {
@@ -21,7 +21,7 @@ export default {
     <div>
         <div class="section_portada_container">
             <div class="section_portada_img">
-                <img :src="foto1" alt="">
+                <img :src="foto1" alt="foto">
                 <div class="overlay"></div>
             </div>
             <div class="section_portada_title">
@@ -29,7 +29,7 @@ export default {
                 <h2 class="subtitle__section">{{ subtitle }}</h2>
             </div>
             <Guirnalda class="girnalda " />
-            <CurvaRight class="curv_right"/>
+            
         </div>
         
     </div>
@@ -81,8 +81,8 @@ img {
 
 .subtitle__section {
     font-family: var(--family__font_secondary);
-    font-weight: 300;
-    font-size: var(--font-size-24);
+    font-weight: 200;
+    font-size: var(--font-size-18);
 }
 
 .girnalda {
@@ -90,14 +90,45 @@ img {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+   
 }
 
-.curv_right {
-    position: absolute;
-    bottom: -30px; 
-    right: 20px;
-    width: 100%; 
-    height: auto; 
-    z-index: 10;
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section_portada_container{
+        min-width:100vw;
+        border:1px solid magenta;
+    }
+    .section_portada_img{
+        width:100%;
+    }
+    .title__section {
+    font-size:var(--font-size-64);
+}
+
+.subtitle__section {
+    font-size: var(--font-size-42);
+    font-weight: 100;
+}
+    
+}
+@media (min-width: 1025px) {
+    
+    .section_portada_container{
+        width:100vw;
+        height:100%;
+    }
+    .section_portada_img{
+        width:100%;
+    }
+    .title__section {
+    font-size:var(--font-size-76);
+}
+
+.subtitle__section {
+    font-size: var(--font-size-36);
+    font-weight: 100;
+}
 }
 </style>

@@ -1,11 +1,13 @@
 <script>
 import SectionPortada from '@/components/SectionPortada.vue';
 import Cuadrante from '@/components/timer/Cuadrante.vue';
+import CurvaRight from '@/components/icon/CurvaRight.vue';
 export default{
     name:'Invitation',
     components:{
         SectionPortada,
-        Cuadrante
+        Cuadrante,
+        CurvaRight
     },
     data(){
         return{
@@ -21,7 +23,9 @@ export default{
         <div class="content_invitacion">
             <div class="box1">
                 <SectionPortada/>
+                <CurvaRight class="curv_right"/>
             </div>
+            
             <div class="box2">
                 <Cuadrante/> 
             </div>
@@ -46,13 +50,47 @@ export default{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position:relative;
+    justify-content: center;
+}
+.box1,
+.box2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.box1{
+    position: relative;
+}
+.curv_right {
+    position: absolute;
+    bottom: -30px; 
+    right: 20px;
+    width: 100%; 
+    height: auto; 
+    z-index: 10;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-   
+  .content_invitacion{
+    width:100vw;
+    padding: 0;
+  }
+  .box1{
+    width:100%;
+  }
+  .curv_right{
+    right: 0;
+  }
+    
 }
 @media (min-width: 1025px) {
+    .content_invitacion{
+    width:100vw;
+    border:1px solid red;
+  }
+  .curv_right{
+    right: 0;
+  }
 }
 
 </style>

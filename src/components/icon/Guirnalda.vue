@@ -15,5 +15,17 @@ export default{
     width:112px;
     height:41px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+    #vector_guirnalda{
+        width:210px;
+        height:80px;
+    }
 
+}
+@media (min-width: 1025px) {
+    #vector_guirnalda{
+        width:300px;
+        height:100px;
+    }
+}
 </style>

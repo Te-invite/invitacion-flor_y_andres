@@ -24,10 +24,23 @@ export default{
     background-image: url('../../assets/img/contador_1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width:320px;
-    height: 320px;
+    width:300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .container__cuadrante{
+        width:420px;
+        height:420px;
+    }
+
+}
+@media (min-width: 1025px) {
+    .container__cuadrante{
+        width:520px;
+        height:520px;
+    }
 }
 </style>
