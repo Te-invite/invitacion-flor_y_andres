@@ -3,13 +3,27 @@ import SectionPortada from '@/components/SectionPortada.vue';
 import Cuadrante from '@/components/timer/Cuadrante.vue';
 import CurvaRight from '@/components/icon/CurvaRight.vue';
 import SectionMensaje from '@/components/SectionMensaje.vue';
+import SectionAsistencia from '@/components/SectionAsistencia.vue';
+import SectionLugarVue from '@/components/SectionLugar.vue.vue';
+import SectionHospedaje from '@/components/SectionHospedaje.vue';
+import SectionDress from '@/components/SectionDress.vue';
+import SectionGift from '@/components/SectionGift.vue';
+import SectionMusic from '@/components/SectionMusic.vue';
+import IconBanderines from '@/components/icon/IconBanderines.vue';
 export default{
     name:'Invitation',
     components:{
         SectionPortada,
         Cuadrante,
         CurvaRight,
-        SectionMensaje
+        SectionMensaje,
+        SectionAsistencia,
+        SectionLugarVue,
+        SectionHospedaje,
+        SectionDress,
+        SectionGift,
+        SectionMusic,
+        IconBanderines
     }
 
 }
@@ -27,6 +41,25 @@ export default{
         </div>
         <div class="box3">
             <SectionMensaje/>
+        </div>
+        <div class="box4">
+            <SectionAsistencia/>
+        </div>
+        <div class="box5">
+            <SectionLugarVue/>
+        </div>
+        <div class="box6">
+            <SectionHospedaje/>
+        </div>
+        <IconBanderines/>
+        <div class="box7">
+            <SectionDress/>
+        </div>
+        <div class="box8">
+            <SectionGift/>
+        </div>
+        <div class="box9">
+            <SectionMusic/>
         </div>
     </div>
 </template>
@@ -48,13 +81,26 @@ export default{
     justify-content: center;
 }
 .box1,
-.box2, .box3{
+.box2, 
+.box3, 
+.box4, 
+.box5,
+.box6,
+.box7,
+.box8,
+.box9{
     width: 100%;
     display: flex;
     justify-content: center;
 
 }
-.box3{
+.box3, 
+.box4, 
+.box5,
+.box6,
+.box7,
+.box8,
+.box9{
     margin-top:2rem
 }
 .box1{
