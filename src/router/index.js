@@ -19,5 +19,11 @@ const router = createRouter({
     }
   ]
 })
-
+router.beforeEach((to, from, next) => {
+  if (from.name === 'Invitation' && to.name !== 'Home') {
+    next({ name: 'Home' }); // Redirige a HomeInvitation
+  } else {
+    next(); // Permite la navegación
+  }
+})
 export default router

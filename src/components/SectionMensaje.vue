@@ -119,10 +119,10 @@ export default {
         height: 75%;
     }
     .comilla1{
-        margin-top: 4rem;
+        margin-top: 5rem;
     }
     .comilla2{
-        margin-bottom: 4rem;
+        margin-bottom:5rem;
     }
 }
 </style>

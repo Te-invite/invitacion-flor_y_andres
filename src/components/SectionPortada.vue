@@ -59,7 +59,8 @@ img {
     left: 0;
     min-width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
+    filter:blur(2px);
 }
 
 .section_portada_title {
