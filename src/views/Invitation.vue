@@ -10,12 +10,6 @@ export default{
         Cuadrante,
         CurvaRight,
         SectionMensaje
-    },
-    data(){
-        return{
-            
-            
-        }
     }
 
 }
@@ -26,8 +20,7 @@ export default{
             <div class="box1">
                 <SectionPortada/>
                 <CurvaRight class="curv_right"/>
-            </div>
-            
+            </div>            
             <div class="box2">
                 <Cuadrante/> 
             </div>
@@ -35,8 +28,6 @@ export default{
         <div class="box3">
             <SectionMensaje/>
         </div>
-        
-         
     </div>
 </template>
 <style>

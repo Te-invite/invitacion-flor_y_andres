@@ -114,19 +114,18 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
-    height: 150px;
+    height: 100%;
 }
 .title__counter{
     margin-bottom: 1.2rem;
 }
 .counter__txt{
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-24);
     color: var( --color__font_primary);
     font-family: var(--family__font_primary);
     font-weight: 800;
-    
     text-align: center;
 }
 .counter__container {
@@ -134,17 +133,18 @@ export default {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 70%;
+    height:100%;
     font-family: var(--family__font_primary);/*numeros */
     font-weight: 600;
     color:var( --color__font_primary);
-    font-size: 2rem;
+    font-size:var(--font-size-24);
+    line-height: 80%;
 }
 
 .counter__content {/*... */
     width: 50px;
-    height:45px;
-    margin: .1rem;
+    height:70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,17 +166,11 @@ export default {
     text-align: center;
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .container{
-        width:75%;
-        height: 100%;
-    }
-    .title__counter{
-        height: 16px;
-        margin-top:-10%;
-    }
+   
     .counter__content {
-    width: 100px;
-    height:80px;
+    width: 100%;
+    height:100%;
+    margin:.1rem;
     }
     .counter__container{
         font-size: 36px;
@@ -192,28 +186,31 @@ export default {
         margin-top:0;
         width:40px;
     }
+    .counter__txt{
+        font-size: var(--font-size-32);
+    }
 }
 @media (min-width: 1025px) {
     .container{
         width:75%;
-        height: 100%;
-}
+        height:50%;
+    }
     .title__counter{
         height: 100%;
         margin-bottom: 3rem;
     }
     .counter__content {
     width: 100px;
-    height:60px;
+    height:100%;
     }
     .counter__container{
-        font-size: var(--font-size-42)
-    }
-    .counter__txt{
         font-size: var(--font-size-36);
     }
+    .counter__txt{
+        font-size: var(--font-size-42);
+    }
     .counter__label {
-        font-size: 24px;
+        font-size: var(--font-size-18);
     }
 }
 </style>
