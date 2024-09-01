@@ -19,34 +19,33 @@ export default {
 </script>
 <template>
     <div class="mensaje_container">
-        <div class="msj_content_text">
-            <img :src="puntilla" class="puntilla" alt="Puntilla">
-            <div class="mensaje_content">
+        <img :src="puntilla" class="puntilla" alt="puntilla">
+        <div class="mensaje_content">
+            <div class="mensaje comillas">
                 <p class="mensaje__txt">{{ mensaje1 }}</p>
                 <p class="mensaje__txt">{{ mensaje2 }}</p>
             </div>
+            <ComillaApertura class="comilla1" />
+            <ComillaCierre class="comilla2" /> 
         </div>
-        <ComillaApertura class="comilla1" />
-        <ComillaCierre class="comilla2" />    
     </div>
-    
 
 </template>
 
 <style>
 .mensaje_container {
-    width: 350px;
-    height: auto;
+    width: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position:relative;
 }
 
 .puntilla {
     width: 100%;
-    height: auto;
+    height: 100%;
+    position:relative;
 }
 
 .msj_content_text {
@@ -55,17 +54,18 @@ export default {
     justify-content: center;
     align-items: center;
     position:relative;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
 }
 
 .mensaje_content{
-    width:90%;
-    height: 80%;
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: absolute;
+    width:70%;
+    height: 300px;
 }
 .mensaje__txt{
     color:var(--color__font_primary);
@@ -74,33 +74,40 @@ export default {
     text-align: center;
     margin: 0;
 }
+.mensaje comillas{
+    position:relative;
+    width: 100%;
+    height:80%;
+    border:1px solid blue;
+}
 .comilla1,
 .comilla2{
     position: absolute;
     left: 50%;
 }
 .comilla1{
-    margin-top: 1.3rem;
+    margin-top: 3.5rem;
     top:0;
 }
 .comilla2{
     bottom:0;
-    margin-bottom: 1.3rem;
+    margin-bottom: 3.5rem;
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .mensaje_container {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height:450px;
+        
     }
     .mensaje__txt{
         font-size: var(--font-size-24);
     }
     .mensaje_content{
         width:80%;
-        height: 80%;
+        height: 400px;
     }
     .comilla1{
-        margin-top: 3rem;
+        margin-bottom: 1rem;
     }
     .comilla2{
         margin-bottom: 3rem;

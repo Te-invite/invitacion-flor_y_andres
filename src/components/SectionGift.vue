@@ -74,7 +74,7 @@ export default{
         font-size: var(--font-size-64);
     }
     .detalle_gift{
-        font-size: var(--font-size-36);
+        font-size: var(--font-size-24);
     }
 }
 </style>

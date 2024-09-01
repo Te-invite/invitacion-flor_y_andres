@@ -10,6 +10,10 @@ import SectionDress from '@/components/SectionDress.vue';
 import SectionGift from '@/components/SectionGift.vue';
 import SectionMusic from '@/components/SectionMusic.vue';
 import IconBanderines from '@/components/icon/IconBanderines.vue';
+import Carrousel from '@/components/Carrousel.vue';
+import CurvaLeft from '@/components/icon/CurvaLeft.vue';
+import CurvaWhite from '@/components/icon/CurvaWhite.vue';
+
 export default{
     name:'Invitation',
     components:{
@@ -23,7 +27,10 @@ export default{
         SectionDress,
         SectionGift,
         SectionMusic,
-        IconBanderines
+        IconBanderines,
+        Carrousel,
+        CurvaLeft,
+        CurvaWhite
     }
 
 }
@@ -34,33 +41,51 @@ export default{
             <div class="box1">
                 <SectionPortada/>
                 <CurvaRight class="curv_right"/>
-            </div>            
+            </div>
+<!----------------------------------------------->            
             <div class="box2">
                 <Cuadrante/> 
             </div>
         </div>
+<!----------------------------------------------->
         <div class="box3">
             <SectionMensaje/>
         </div>
+<!----------------------------------------------->
         <div class="box4">
             <SectionAsistencia/>
         </div>
+<!----------------------------------------------->
         <div class="box5">
             <SectionLugarVue/>
         </div>
+<!----------------------------------------------->
+        <div class="box_carousel">
+            <CurvaLeft class="curvaL"/>
+            <Carrousel/>
+            <CurvaWhite class="curvaW"/>
+        </div>
+<!----------------------------------------------->
         <div class="box6">
             <SectionHospedaje/>
         </div>
-        <IconBanderines/>
+<!----------------------------------------------->
+        <div class="box10">
+            <IconBanderines/>
+        </div>
+<!----------------------------------------------->
         <div class="box7">
             <SectionDress/>
         </div>
+<!----------------------------------------------->
         <div class="box8">
             <SectionGift/>
         </div>
+<!----------------------------------------------->
         <div class="box9">
             <SectionMusic/>
         </div>
+<!----------------------------------------------->
     </div>
 </template>
 <style>
@@ -88,11 +113,14 @@ export default{
 .box6,
 .box7,
 .box8,
-.box9{
+.box10{
     width: 100%;
     display: flex;
     justify-content: center;
 
+}
+.box10{
+    height:50%;
 }
 .box3, 
 .box4, 
@@ -100,19 +128,40 @@ export default{
 .box6,
 .box7,
 .box8,
-.box9{
+.box9,
+.box_carousel
+{
     margin-top:2rem
 }
 .box1{
     position: relative;
 }
+.curvaL,
+.curv_right,
+.curvaW{
+    position:absolute;
+    z-index: 10;
+}
 .curv_right {
-    position: absolute;
     bottom: -30px; 
     right: 20px;
     width: 100%; 
-    height: auto; 
-    z-index: 10;
+    height: auto;  
+}
+.box_carousel{
+    position:relative;
+}
+.curvaL{
+    top:-35px;
+    left:0px;
+    width: 100%;
+    height:auto;   
+}
+.curvaW{
+    bottom: -23px; 
+    right: 0px;
+    width: 100%; 
+    height: auto;  
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content_invitacion{

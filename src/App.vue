@@ -7,5 +7,8 @@
 </template>
 
 <style scoped>
+#app-container{
+  overflow: hidden;
+}
 
 </style>

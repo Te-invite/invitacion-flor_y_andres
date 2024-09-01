@@ -99,11 +99,15 @@ export default {
     }
 }
 @media (min-width: 1025px) {
+    .asistencia__conteiner_music{
+        width:100%;
+        height:450px;
+    }
     .title_section_music{
         font-size: var(--font-size-64);
     }
     .detalle_music{
-        font-size: var(--font-size-36);
+        font-size: var(--font-size-24);
     }
 }
 </style>

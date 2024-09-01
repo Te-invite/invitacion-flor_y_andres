@@ -1,5 +1,5 @@
 <script>
-import foto1 from '@/assets/img/foto01.png';
+import foto1 from '@/assets/img/opcion1.jpg';
 import Guirnalda from './icon/Guirnalda.vue';
 
 export default {
@@ -21,7 +21,7 @@ export default {
     <div>
         <div class="section_portada_container">
             <div class="section_portada_img">
-                <img :src="foto1" alt="foto">
+                <img :src="foto1"  class="img_portada" alt="foto">
                 <div class="overlay"></div>
             </div>
             <div class="section_portada_title">
@@ -29,9 +29,8 @@ export default {
                 <h2 class="subtitle__section">{{ subtitle }}</h2>
             </div>
             <Guirnalda class="girnalda " />
-            
         </div>
-        
+
     </div>
 </template>
 <style>
@@ -45,22 +44,27 @@ export default {
 
 .section_portada_img {
     position: relative;
+    min-width:100%;
+    height:100%;
 }
 
-img {
+
+.img_portada{
     display: block;
-    min-width: 100%;
+    width: 100vw;
     height: auto;
+    object-fit: cover;
+    filter:blur(2px);
 }
 
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    min-width: 100;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    filter:blur(2px);
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .section_portada_title {
