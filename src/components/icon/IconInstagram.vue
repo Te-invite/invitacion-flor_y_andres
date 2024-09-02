@@ -34,14 +34,14 @@ export default {
     display: flex;
 } */
 .instagram{
-    width: 70px;
-    height: 70px;
-    stroke: var(--color__principal_dark);
+    width: 60px;
+    height: 60px;
+    stroke: var( --color-icon);
     stroke-width: 3;
     fill:white;
   }
   .instagram #vector_2{
-    fill: var(--color__principal_dark);
+    fill: var( --color-icon);
   }
   
   #circulo {
@@ -50,8 +50,8 @@ export default {
   }
   
   @keyframes fillCircle {
-    0% { fill: var(--color__principal_dark); }
-    50% { fill: var(--color__principal_dark); }
+    0% { fill: var( --color-icon); }
+    50% { fill: var( --color-icon); }
     100% { fill: none; }
   }
   

@@ -23,7 +23,7 @@ export default{
 }
 </script>
 <template>
-    <div class="asistencia__conteiner container">
+    <div id="lugar" class="asistencia__conteiner container">
         <div class="asistencia_content">
             <h1 class="title_section_lugar">{{ title }}</h1>
         </div>
