@@ -1,17 +1,25 @@
 <script>
 import Boton from './Boton.vue';
 import IconGift from './icon/IconGift.vue';
+import PopupBancario from './PopupBancario.vue';
 export default{
     name:'SectionGift',
     data(){
         return{
             title:'Regalo',
-            detalle:'Si deseas regalarnos algo más que tu hermosa presencia...'
+            detalle:'Si deseas regalarnos algo más que tu hermosa presencia...',
+            popup:false
         }
     },
     components:{
         IconGift,
-        Boton
+        Boton,
+        PopupBancario
+    },
+    methods: {
+        togglePopUp(){
+            this.popup = !this.popup
+        }        
     }
 }
 </script>
@@ -24,7 +32,10 @@ export default{
         <div class="asistencia_description">
             <p class="detalle_gift">{{ detalle }}</p>
         </div>
-        <Boton label="DATOS BANCARIOS" customClass="btn-mayor"/>
+        <div class="container__button">
+            <PopupBancario v-show="popup" @close="togglePopUp()"/>
+            <Boton label="DATOS BANCARIOS" customClass="btn-mayor" @click="togglePopUp()"/>
+        </div>
         
     </div>
 </template>

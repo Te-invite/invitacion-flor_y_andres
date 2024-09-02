@@ -19,30 +19,13 @@ export default {
 </script>
 
 <style scoped>
-    @keyframes rotateY {
-    0% {
-        transform: rotateY(0deg);
-    }
-    40% {
-        transform: rotateY(180deg);
-    }
-    45% {
-        transform: rotateY(180deg);
-    }
-    85% {
-        transform: rotateY(360deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-
+    
 .location {
-    width:35px;
-    height:35px;
+    width:60px;
+    height:60px;
     animation: 2.5s ease 0s infinite beat;
     transform-origin: center center;
-    fill: var( --color__principal_dark);
+    fill: var( --color-icon);
 }
 @keyframes beat {
 

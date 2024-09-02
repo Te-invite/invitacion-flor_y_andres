@@ -62,8 +62,8 @@ export default {
 
     .card {
         width: calc(100% / 4);
-        margin: 0 .5em;
-        height:380px;
+        margin: 0 .1em;
+        height:100%;
     }
 
     .image-wrapper {
@@ -79,22 +79,22 @@ export default {
     .cards-wrapper {
         display: flex;
         flex-direction: row;
-        overflow-x: auto; /* Permitir scroll horizontal si es necesario */
-        gap: 0.5em; /* Espacio entre las tarjetas */
+        overflow-x: auto; 
+        gap: 0.5em; 
     }
 
     .card {
-        width: 50%; /* Reducir el ancho para evitar desbordamientos */
+        width: 50%; 
         flex-grow: 1;
         flex-shrink: 0;
-        flex-basis: auto; /* Quitar el margen para evitar desbordes */
+        flex-basis: auto; 
         height:280px;
         margin-bottom: 1rem;
     }
 
     .image-wrapper {
         width:100%;
-        height: 100px; /* Ajustar altura automáticamente */
+        height: 100px; 
     }
 }
 

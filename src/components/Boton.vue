@@ -21,12 +21,13 @@ export default{
 </template>
 <style>
 .btn-mayor{
+    width: 300px;
     background: transparent;
     color:var(--color_font_btn);
     border: 1px solid var(--line__buttom);
     font-family: Montserrat;
     font-size: var(--font-size-18);
-    padding: .5rem 1rem;
+    padding: .75rem 1rem;
 }
 .btn-mayor:hover{
     background:var(--color_font_btn);

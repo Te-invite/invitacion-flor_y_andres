@@ -37,7 +37,7 @@ export default {
         </iframe>
       </div>
       <h5 class="card-title">{{ nombre }}</h5>
-      <Boton label="¿Cómo llegar?" customClass="btn-mayor" @click="openMap()" />
+      <Boton label="¿Cómo llegar?" customClass="btn-card" @click="openMap()" />
     </div>
   </div>
 </template>
@@ -61,5 +61,17 @@ export default {
 
 .card-title {
   margin-top: 1rem;
+}
+.btn-card{
+    width: 100%;
+    background: transparent;
+    color:var(--color_font_btn);
+    border: 1px solid var(--line__buttom);
+    font-family: Montserrat;
+    font-size: var(--font-size-16);
+}
+.btn-card:hover{
+    background:var(--color_font_btn);
+    color:var(--font-light);
 }
 </style>

@@ -85,7 +85,7 @@ export default {
 
 .subtitle__section {
     font-family: var(--family__font_secondary);
-    font-weight: 200;
+    font-weight: 400;
     font-size: var(--font-size-18);
 }
 

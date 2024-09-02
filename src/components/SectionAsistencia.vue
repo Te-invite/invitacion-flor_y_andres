@@ -1,16 +1,25 @@
 <script>
+import PopupAsistencia from './PopupAsistencia.vue';
 import IconParty from './icon/IconParty.vue';
 import Boton from './Boton.vue';
 export default{
     name:'SectionAsistencia',
     data(){
         return{
-            title:'Ceremonia & Fiesta'
+            title:'Ceremonia & Fiesta',
+            popup:false
+            
         }
     },
     components:{
         IconParty,
-        Boton
+        Boton,
+        PopupAsistencia
+    },
+    methods: {
+        togglePopUp(){
+            this.popup = !this.popup
+        }        
     }
 }
 </script>
@@ -24,7 +33,11 @@ export default{
             <p class="detalle_asistencia">Los esperamos el día <strong><br>2 de noviembre de 2024</strong></p>
             <p class="detalle_asistencia"><strong>Comenzamos 18:00 HS.</strong><br>Te pedimos por favor que seas puntual.</p>
         </div>
-        <Boton label="CONFIRMAR ASISTENCIA" customClass="btn-mayor"/>
+        <div class="container__button">
+            <PopupAsistencia v-show="popup" @close="togglePopUp()"/>
+            <Boton label="CONFIRMAR ASISTENCIA" customClass="btn-mayor" @click="togglePopUp()"/>
+        </div>
+        
         
     </div>
 </template>

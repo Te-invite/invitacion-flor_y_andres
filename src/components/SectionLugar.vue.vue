@@ -1,16 +1,24 @@
 <script>
 import Boton from './Boton.vue';
+import PopupLocalizacion from './PopupLocalizacion.vue';
 export default{
     name:'SectionLugar',
     data(){
         return{
             title:'Lugar',
             detalle1:'La Rural - Salón grande',
-            detalle2:'Entrada por Ruta 3 - Tres Arroyos'
+            detalle2:'Entrada por Ruta 3 -Tres Arroyos',
+            popup: false
         }
     },
     components:{
-        Boton
+        Boton,
+        PopupLocalizacion
+    },
+    methods: {
+        togglePopUp(){
+            this.popup = !this.popup
+        }        
     }
 }
 </script>
@@ -23,7 +31,10 @@ export default{
             <p class="detalle_lugar">{{ detalle1 }}</p>
             <p class="detalle2_lugar">{{ detalle2 }}</p>
         </div>
-        <Boton label="¿Como llegar?" customClass="btn-mayor"/>
+        <div class="container__button">
+            <PopupLocalizacion v-show="popup" @close="togglePopUp()"/>
+            <Boton label="¿COMO LLEGAR?" customClass="btn-mayor" @click="togglePopUp()"/>
+        </div>
         
     </div>
 </template>

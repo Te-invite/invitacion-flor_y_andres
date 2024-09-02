@@ -2,19 +2,46 @@
 import IconMusic from './icon/IconMusic.vue';
 import puntilla from '@/assets/img/puntilla.png';
 import Boton from './Boton.vue';
+import Swal from 'sweetalert2';
 export default {
     name: 'SectionMusic',
     data() {
         return {
             title: 'Música',
             detalle: 'Si deseas regalarnos algo más que tu hermosa presencia...',
-            puntilla
+            puntilla,
+            popup:false
         }
     },
     components: {
         Boton,
         IconMusic
+    },
+    methods: {
+        togglePopUp(){
+            this.popup = !this.popup
+        },
+        redirectToSheet() {
+        Swal.fire({
+            title: 'Info!',
+            text: 'Será redirigido a Google Sheet. Para continuar presione OK, o Cancelar para cerrar.',
+            icon: 'info',
+            showCancelButton: true, // Habilita el botón "Cancelar"
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancelar', // Texto del botón "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Si el usuario presiona "OK"
+                window.open("https://docs.google.com/spreadsheets/d/14ZqiU3aUkCa3sFiHhx7QuyGkOamEDwLxTVRHkViNydE/edit?usp=sharing", "_blank");
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                // Si el usuario presiona "Cancelar", cierra el popup de SweetAlert
+                this.togglePopUp();
+            }
+        });
+    }    
     }
+    
+        
 }
 </script>
 <template>
@@ -29,7 +56,7 @@ export default {
                 <p class="detalle_music">¿Cuál es la canción que no debe faltar en la <strong>PlayList</strong> de la fiesta?
                 </p>
             </div>
-            <Boton label="SUGERIR CANCIÓN" customClass="btn-mayor" />
+                <Boton label="SUGERIR CANCIÓN" customClass="btn-mayor" @click="redirectToSheet()"/>
         </div>
 
     </div>
