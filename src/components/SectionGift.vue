@@ -24,7 +24,7 @@ export default{
 }
 </script>
 <template>
-    <div class="asistencia__conteiner container">
+    <div id="regalo" class="asistencia__conteiner container">
         <div class="asistencia_content">
             <IconGift/>
             <h1 class="title_section_gift">{{ title }}</h1>

@@ -45,7 +45,7 @@ export default {
 }
 </script>
 <template>
-    <div class="asistencia__conteiner_music container">
+    <div id="musica" class="asistencia__conteiner_music container">
         <img :src="puntilla" class="puntilla" alt="">
         <div class="content__music">
             <div class="asistencia_content">

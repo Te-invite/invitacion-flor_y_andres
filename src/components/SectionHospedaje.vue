@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <template>
-    <div class="asistencia__conteiner container">
+    <div id="hospedaje" class="asistencia__conteiner container">
         <div class="asistencia_content">
             <IconHospedaje />
             <h1 class="title_section_hospedaje">{{ title }}</h1>

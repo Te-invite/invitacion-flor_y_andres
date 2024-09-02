@@ -13,6 +13,8 @@ import IconBanderines from '@/components/icon/IconBanderines.vue';
 import Carrousel from '@/components/Carrousel.vue';
 import CurvaLeft from '@/components/icon/CurvaLeft.vue';
 import CurvaWhite from '@/components/icon/CurvaWhite.vue';
+import SectionRedes from '@/components/SectionRedes.vue';
+import SectionFooter from '@/components/SectionFooter.vue';
 
 export default {
     name: 'Invitation',
@@ -30,7 +32,9 @@ export default {
         IconBanderines,
         Carrousel,
         CurvaLeft,
-        CurvaWhite
+        CurvaWhite,
+        SectionRedes,
+        SectionFooter
     }
 
 }
@@ -86,16 +90,21 @@ export default {
             <SectionMusic />
         </div>
         <!----------------------------------------------->
-        <div class="container__footer">
-            <div class="text_desarrolladores">
-                <p class="dev1">Develop by</p>
-                
-                <a href="https://www.instagram.com/teinviteok/" target="_blank" rel="noopener noreferrer">
-                    <p class="dev2">Teinvite.io</p>
-                </a>
-            </div>
+        <div class="box11">
+            <SectionRedes/>
         </div>
-        
+        <!----------------------------------------------->
+        <div class="box_section">
+                <a href="#asistencia" class="opcion_menu">Confirmar Asistencia</a>
+                <a href="#lugar" class="opcion_menu">¿Como llegar?</a>
+                <a href="#hospedaje" class="opcion_menu">Hospedaje</a>
+                <a href="#dress" class="opcion_menu">Dress</a>
+                <a href="#regalo" class="opcion_menu">Regalo</a>
+                <a href="#musica" class="opcion_menu">Sugerir Canción</a>
+            </div>
+        <div class="box12">
+            <SectionFooter/>
+        </div>
     </div>
 </template>
 <style>
@@ -107,6 +116,7 @@ export default {
     justify-content: space-between;
     align-items: center;
 }
+
 
 .content_invitacion {
     width: 100%;
@@ -125,7 +135,9 @@ export default {
 .box6,
 .box7,
 .box8,
-.box10 {
+.box10,
+.box11,
+.box12 {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -182,29 +194,23 @@ export default {
     width: 100%;
     height: auto;
 }
-.text_desarrolladores {
-    width: 100%;
-    display: flex;
+.box12{
+    margin-top:1rem;
+}
+.box_section{
+    display:flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    font-family: Montserrat;
-    margin-top: 2rem;
 }
-.icon{
-    color:var(--color-font);
-    font-size: .75rem;
-    margin-left: .5rem;
-    border:1px solid red;
+.box_section{
+    font-size:.5rem;
 }
-.dev1 {
-    color: grey;
-    font-size: .5rem;
-}
-
-.dev2 {
-    color: black;
-    font-size: .5rem;
+.opcion_menu{
+    margin-left:.3rem;
+    font-family: var( --family__font_secondary);
+    color:var(--color__font_primary);
+    text-decoration: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .content_invitacion {
@@ -229,6 +235,15 @@ export default {
 
     .curv_right {
         right: 0;
+    }
+    .box_section{
+        font-size:1rem;
+    }
+    .box12{
+        margin-top:.5rem;
+    }
+    .opcion_menu{
+        margin-right:1rem;
     }
 }
 </style>
