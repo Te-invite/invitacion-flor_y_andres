@@ -6,7 +6,7 @@ export default{
     data(){
         return{
             title:'Lugar',
-            detalle1:'La Rural - Salón grande',
+            detalle1:'La Rural - Salón Los Mellizos',
             detalle2:'Entrada por Ruta 3 -Tres Arroyos',
             popup: false
         }
