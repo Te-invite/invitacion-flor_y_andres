@@ -24,7 +24,7 @@ export default {
         redirectToSheet() {
         Swal.fire({
             title: 'Info!',
-            text: 'Será redirigido a Google Sheet. Para continuar presione OK, o Cancelar para cerrar.',
+            text: 'Será redirigido a YouTube. Para continuar presione OK, o Cancelar para cerrar.',
             icon: 'info',
             showCancelButton: true, // Habilita el botón "Cancelar"
             confirmButtonText: 'OK',
@@ -32,7 +32,7 @@ export default {
         }).then((result) => {
             if (result.isConfirmed) {
                 // Si el usuario presiona "OK"
-                window.open("https://docs.google.com/spreadsheets/d/14ZqiU3aUkCa3sFiHhx7QuyGkOamEDwLxTVRHkViNydE/edit?usp=sharing", "_blank");
+                window.open("https://music.youtube.com/playlist?list=PLm5IYZEg1jsd8DPmitpSacPwvg5OmS0Ca&jct=95SzsHiq4-oRVWyi5YqXEA", "_blank");
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 // Si el usuario presiona "Cancelar", cierra el popup de SweetAlert
                 this.togglePopUp();
