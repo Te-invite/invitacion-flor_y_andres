@@ -225,10 +225,6 @@ export default {
     .curv_right {
         right: 0;
     }
-    .curvaL {
-        top: -50px;
-    }
-
 }
 
 @media (min-width: 1025px) {
@@ -239,9 +235,7 @@ export default {
     .curv_right {
         right: 0;
     }
-    .curvaL {
-        top: -92px;
-    }
+    
     .box_section{
         font-size:1rem;
     }
