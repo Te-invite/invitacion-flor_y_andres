@@ -37,7 +37,7 @@ export default{
             <PopupAsistencia v-show="popup" @close="togglePopUp()"/>
             <Boton label="CONFIRMAR ASISTENCIA" customClass="btn-mayor" @click="togglePopUp()"/>
         </div>
-        
+         <p class="detalle_asistencia3">(Confirmar hasta el 15 de octubre)</p>
         
     </div>
 </template>
@@ -70,6 +70,14 @@ export default{
     text-align: center;
     font-weight: 200;
 }
+.detalle_asistencia3{
+    font-family: var(--family__font_secondary);
+    color:var(--color__font_primary);
+    font-size: var(--font-size-16);
+    text-align: center;
+    font-weight: 200;
+    margin-top: .3rem;
+}
 .asistencia_description{
     width:80%;
     height:100%;
@@ -81,6 +89,9 @@ export default{
     .detalle_asistencia{
         font-size: var(--font-size-24);
     }
+    .detalle_asistencia3{
+    font-size: var(--font-size-18);
+    }
 
 }
 @media (min-width: 1025px) {
@@ -89,6 +100,9 @@ export default{
     }
     .detalle_asistencia{
         font-size: var(--font-size-24);
+    }
+    .detalle_asistencia3{
+        font-size: var(--font-size-16);
     }
 }
 </style>
